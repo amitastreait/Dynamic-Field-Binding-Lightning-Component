@@ -6,12 +6,12 @@ As we all know that we can use the Dynamic Binding in the VisualForce page but i
 
 In this example, We will show the list of Objects into the Component and when user will select any object it will dynamically show the TOP 15 records into a table.
 
-Output will look like below
+### Output will look like below
 ![Output](https://github.com/amitastreait/Dynamic-Field-Binding-Lightning-Component/blob/master/OutPut.png)
 
 
-Step1 - Create Apex Class
-DynamicBindingDemoController.class
+### Step1 - Create Apex Class
+### DynamicBindingDemoController.class
 ```
 /*
  * @Author : Amit Singh
@@ -100,7 +100,7 @@ public class DynamicBindingDemoController {
 }
 ```
 
-Step2 - Create the Lightning Component
+### Step2 - Create the Lightning Component
 
 DynamicBindingDemo.cmp
 ```
@@ -151,8 +151,8 @@ DynamicBindingDemo.cmp
 
 See the comments into the component.
 
-Step3: - Click on Controller from the right and paste the below code for Controller Javascript
-DynamicBindingDemoController.js
+### Step3: - Click on Controller from the right and paste the below code for Controller Javascript
+### DynamicBindingDemoController.js
 ```
 
 ({
@@ -165,9 +165,9 @@ DynamicBindingDemoController.js
 })
 
 ```
-Step4: - Click on Helper from the right and paste the below code for Helper Javascript
+### Step4: - Click on Helper from the right and paste the below code for Helper Javascript
 
-DynamicBindingDemoHelper.js
+### DynamicBindingDemoHelper.js
 ```
 
 ({
@@ -276,19 +276,24 @@ DynamicBindingDemoHelper.js
 ```
 See the comments.
 
-Step5: - Create Lightning Application
-DynamicBindingDemoApplication.app
+### Step5: - Create Lightning Application
+### DynamicBindingDemoApplication.app
 ```
 <aura:application access="Global" extends="force:slds" >
 <c:DynamicBindingDemo />
 </aura:application>
 ```
-Click on Preview to see the output of the component.
+### Click on Preview to see the output of the component.
 
-Happy learning :)
+Happy learning :smiling_imp:
 
-Sharing is caring :) ;)
+Sharing is caring :cop:
 
-Resource:- 
+<a href="https://githubsfdeploy.herokuapp.com/?owner=amitastreait&repo=Dynamic-Field-Binding-Lightning-Component">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
 
-[OPFOCOUS Blog](https://opfocus.com/dynamic-field-binding-in-salesforce-lightning-experience/)
+### Resource:- 
+
+### [OPFOCOUS Blog](https://opfocus.com/dynamic-field-binding-in-salesforce-lightning-experience/)
