@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction,force:hasSObjectName" 
+                controller='DynamicBindingDemoController'
+                access="global" >
+    <!-- call the doInit method to load the list of All the Available Objects into the Org -->
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}' />
+    <aura:attribute name='objectList' type='List' />
+    <aura:attribute name="isSending" type="boolean" />
+    <c:Spinner /> 
+    <div class="slds-m-around_small">
+        <div class="slds-page-header">
+            <div class="slds-media">
+                <div class="slds-media__body">
+                    <h1 class="slds-page-header__title slds-truncate slds-align-middle" title="Dynamic Binding in Ligtning Component">
+                        Dynamic Field Binding in Ligtning Component</h1>
+                    <p class="slds-text-body_small slds-line-height_reset">
+                        By SFDC Panther • 24/02/2018</p>
+                </div>
+            </div><br/>
+        </div><br/>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_1-of-2">
+                <div class="slds-box_x-small">
+                    <!-- show the list of All the Object -->
+                    <lightning:select name="selectObject" label="Select an Object" 
+                                      onchange="{!c.doHandleChange}" aura:id='selectObject'>
+                        <option value="" text="- None -" />
+                        <aura:iteration items='{!v.objectList}' var='obj'>
+                            <option value="{!obj.key}" text="{!obj.value}" />
+                        </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            <br/>
+            <ui:scrollerWrapper class="scrollerSize">
+                <div class="slds-size_2-of-2">
+                    <div id='sfdctable' aura:id='sfdcDiv'>
+                        <!-- devision that will show the dynamic content -->
+                    </div>
+                </div>
+            </ui:scrollerWrapper>
+        </div>
+    </div>
+</aura:component>
